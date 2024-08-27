@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book a Hotel - Hotel Booking</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Hotel Booking System</h1>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="login.html" id="login-link" style="display:none;">Login</a>
+            <a href="booking.html" id="booking-link" style="display:none;">Book a Hotel</a>
+            <a href="logout.html" id="logout-link" style="display:none;">Logout</a>
+        </nav>
+    </header>
+    <main>
+        <section id="hotel-list">
+            <h2>Available Hotels</h2>
+            <ul>
+                <li>
+                    <h3>Hotel Sunshine</h3>
+                    <p>Location: Miami</p>
+                    <p>Price: $120/night</p>
+                    <button onclick="selectHotel('Hotel Sunshine', 'Miami', '$120/night')">Book Now</button>
+                </li>
+                <li>
+                    <h3>Hotel Moonlight</h3>
+                    <p>Location: New York</p>
+                    <p>Price: $150/night</p>
+                    <button onclick="selectHotel('Hotel Moonlight', 'New York', '$150/night')">Book Now</button>
+                </li>
+                <li>
+                    <h3>Hotel Stardust</h3>
+                    <p>Location: San Francisco</p>
+                    <p>Price: $180/night</p>
+                    <button onclick="selectHotel('Hotel Stardust', 'San Francisco', '$180/night')">Book Now</button>
+                </li>
+            </ul>
+        </section>
+        <section id="booking-form" style="display:none;">
+            <h2>Book Your Hotel</h2>
+            <form id="form">
+                <label for="name">Your Name:</label>
+                <input type="text" id="name" required>
+                <input type="hidden" id="hotel-name">
+                <input type="hidden" id="hotel-location">
+                <input type="hidden" id="hotel-price">
+                <button type="submit">Book Now</button>
+            </form>
+        </section>
+        <section id="bookings">
+            <h2>Your Bookings</h2>
+            <ul id="booking-list"></ul>
+        </section>
+    </main>
+    <script src="script.js"></script>
+</body>
+</html>
